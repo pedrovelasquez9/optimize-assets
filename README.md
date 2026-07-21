@@ -19,14 +19,22 @@ Claude Code / AI-agent skill and as a plain CLI. One dependency: `sharp`.
 
 ## Install
 
-Requires Node 18+. Install the one dependency in your project:
+Requires Node 18+ and one dependency (`sharp`) in the project whose assets you
+optimize:
 
 ```bash
 npm i -D sharp      # or: pnpm add -D sharp  /  yarn add -D sharp
 ```
 
-Then copy this folder in. As a Claude Code skill it lives at
-`.claude/skills/optimize-assets/`; as a plain tool it can live anywhere.
+**As a Claude Code plugin** (recommended — auto-updates):
+
+```
+/plugin marketplace add pedrovelasquez9/optimize-assets
+/plugin install optimize-assets@programacion-es
+```
+
+**By hand:** copy `skills/optimize-assets/` into your project's
+`.claude/skills/`. As a plain CLI it can live anywhere.
 
 ---
 
@@ -40,8 +48,8 @@ Ask the agent in natural language — no command to remember:
 
 The agent previews with `--dry-run`, confirms with you (these are usually a
 designer's assets — fidelity matters), runs the optimization in place, and
-reports the before → after total. In Claude Code you can also invoke it
-explicitly with `/optimize-assets`.
+reports the before → after total. Installed as a plugin, invoke it explicitly
+with `/optimize-assets:optimize-assets`.
 
 ---
 
