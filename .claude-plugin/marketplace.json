@@ -1,0 +1,16 @@
+{
+  "name": "programacion-es",
+  "owner": { "name": "Pedro Plasencia" },
+  "plugins": [
+    {
+      "name": "optimize-assets",
+      "source": "./",
+      "description": "Shrink web image assets in place. Idempotent, one dependency (sharp).",
+      "version": "1.0.0",
+      "author": { "name": "Pedro Plasencia" },
+      "homepage": "https://programacion-es.dev",
+      "license": "MIT",
+      "keywords": ["images", "optimization", "assets", "sharp", "webp", "compression"]
+    }
+  ]
+}

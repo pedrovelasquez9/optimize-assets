@@ -1,0 +1,10 @@
+{
+  "name": "optimize-assets",
+  "description": "Shrink web image assets in place: resize + re-encode PNG/JPG keeping the same filenames, so every <img src> and /assets URL stays identical. Idempotent, one dependency (sharp).",
+  "version": "1.0.0",
+  "author": { "name": "Pedro Plasencia" },
+  "homepage": "https://programacion-es.dev",
+  "repository": "https://github.com/pedrovelasquez9/optimize-assets",
+  "license": "MIT",
+  "keywords": ["images", "optimization", "assets", "sharp", "webp", "compression"]
+}
