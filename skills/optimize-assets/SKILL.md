@@ -13,6 +13,10 @@ CHANGED files. It **never enlarges** a file (writes only when the result is
 smaller).
 
 The tool is `optimize-assets.mjs`, bundled in this folder. Run it with `node`.
+When installed as a plugin, the script lives at
+`${CLAUDE_PLUGIN_ROOT}/skills/optimize-assets/optimize-assets.mjs` — the
+`SCRIPT` shorthand below stands for that path (or wherever you copied the folder,
+e.g. `.claude/skills/optimize-assets/optimize-assets.mjs`).
 
 ## When to use
 
@@ -29,10 +33,10 @@ this keeps the same files, just lighter.
 npm i -D sharp            # or: pnpm add -D sharp
 
 # 2. preview first — writes nothing, prints projected savings
-node .claude/skills/optimize-assets/optimize-assets.mjs <dir> --dry-run
+node "$CLAUDE_PLUGIN_ROOT/skills/optimize-assets/optimize-assets.mjs" <dir> --dry-run
 
 # 3. optimize in place (conservative defaults: cap 1600px, quality 82)
-node .claude/skills/optimize-assets/optimize-assets.mjs <dir>
+node "$CLAUDE_PLUGIN_ROOT/skills/optimize-assets/optimize-assets.mjs" <dir>
 ```
 
 Always show the `--dry-run` projection and confirm before the real pass — these
@@ -97,7 +101,7 @@ automatically. Keep the manifest OUT of any folder that gets deployed/synced
 ## Verify the tool itself
 
 ```bash
-node .claude/skills/optimize-assets/optimize-assets.mjs --self-test
+node "$CLAUDE_PLUGIN_ROOT/skills/optimize-assets/optimize-assets.mjs" --self-test
 ```
 Generates a synthetic 3000px PNG, optimizes it, and asserts it shrank, was
 resized, and that a second run does not rewrite it.
