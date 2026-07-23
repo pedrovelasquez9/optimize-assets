@@ -53,6 +53,24 @@ with `/optimize-assets:optimize-assets`.
 
 ---
 
+## Slash commands
+
+Installed as a plugin, three commands give you a direct, argument-driven entry —
+every CLI flag is forwarded, so the three cover all of them:
+
+| command | does |
+|---|---|
+| `/optimize-assets:optimize <dir> [flags]` | preview → confirm → optimize in place |
+| `/optimize-assets:preview <dir> [flags]` | dry-run only — writes nothing, no confirmation |
+| `/optimize-assets:check` | run the built-in self-test |
+
+```
+/optimize-assets:optimize public/assets --quality 90 --no-palette --max 2048
+/optimize-assets:preview public/assets
+```
+
+---
+
 ## Use it as a CLI
 
 ```bash
